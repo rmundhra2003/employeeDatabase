@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Employee Department Database</title>
+</head>
+<body>
+<div th:replace="base :: nav"></div>
+
+<h2>Add a Department</h2>
+<form action="#"
+      th:action="@{/processDepartment}"
+      th:object="${department}"
+      method="POST">
+    <input type="hidden" th:field="*{id}" />
+    Department Name: <input type="text" th:field="*{departmentName}" />
+    <span th:if="${#fields.hasErrors('departmentName')}" th:errors="*{departmentName}"></span> <br/>
+
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

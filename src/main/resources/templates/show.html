@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>All Employees</title>
+</head>
+<body>
+
+<div th:replace="base :: nav"></div>
+Employee Name: <span th:text="${employee.employeeName}"></span> <br/>
+Department: <span th:text="${employee.department.departmentName}"></span> <br/>
+<a th:href="@{/delete/{id}(id=${employee.id})}">Delete this employee</a>
+</body>
+</html>
