@@ -12,8 +12,8 @@
       th:object="${employee}"
       method="POST">
     <input type="hidden" th:field="*{id}" />
-    Employee Name: <input type="text" th:field="*{name}" />
-    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> <br/>
+    Employee Name: <input type="text" th:field="*{employeeName}" />
+    <span th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></span> <br/>
 
     Department:
     <select name="department" id="department" class="custom-select" th:field="*{department}">

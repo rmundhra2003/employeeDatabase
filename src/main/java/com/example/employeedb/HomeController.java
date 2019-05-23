@@ -35,7 +35,7 @@ public class HomeController {
 
     @GetMapping("/add")
     public String employeeForm(Model model) {
-        model.addAttribute("departments", departmentRepository);
+        model.addAttribute("departments", departmentRepository.findAll());
         model.addAttribute("employee", new Employee());
         return "employeeform";
     }
